@@ -1,0 +1,960 @@
+/*IMPORTS*/
+@import 'estiloTitulos';
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/* -------------------- SECCIÓN MENÚ / NAV BAR -------------------------------------*/
+
+nav {
+    background-color: #4D9E5C;
+    
+}
+
+nav ul {
+    padding: 20px 20px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 10px 70px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav ul li:hover {
+    background-color: #7f9b84;
+    transition: 0.9s;
+}
+
+@media only screen and (max-width: 992px) {
+    nav ul {
+        height: 230px;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 574px){
+    nav ul {
+        height: 230px;
+        flex-direction: column;
+        text-align: center;
+    }
+    }
+
+/* --------------------FOOTER-------------------------------------*/
+
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    position: static;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: #4D9E5C;
+    padding: 70px 0;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 50px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #83a088;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not( :last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color:#ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #ffffff;
+    display: block;
+    transition: all 0.3s ease;
+
+}
+
+.footer-col ul li a:hover {
+    background-color: #7f9b84;
+    transition: 0.9s;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #7f9b84;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #4D9E5C;
+    background-color: #7f9b84;
+}
+
+/* ---------------MEDIA QUERY FOOTER --------------------------*/
+@media (max-width: 767px){
+.footer-col {
+    width: 50%;
+    padding: 0 15px;
+    margin-bottom: 30px;            
+}  
+}
+
+@media (max-width: 574px){
+.footer-col {
+    width: 100%;          
+}  
+}
+
+/* -------------------- SECCIÓN PRINCIPAL/INDEX-------------------------------------*/
+
+/* -------------------- GRID CONTENEDOR DE PAGINA PRINCIPAL/INDEX-------------------------------------*/
+.tituloPrincipal {
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+}
+
+#containerIndex {
+display: grid;
+height: 100vh;
+width: 100vw;
+padding: 0;
+margin-top: -15px;
+grid-template-columns: 100%;
+grid-template-rows: 97% 3%;
+grid-template-areas:
+                        "section"
+                        "footer";
+
+/* -------------------- GRID DE GALERIA DE PÁGINA PRINCIPAL/INDEX -------------------------------------*/
+            #galeriaIndex {
+                display: grid;
+                grid-template-columns: 20% 20% 20% 20% 20%;
+                grid-template-rows: 100%;
+                grid-template-areas:
+                            "index1 index2 index3 index4 index5";
+
+
+                                    #photo1 {
+                                        grid-area: index1;
+                                    }
+                                                    
+                                    #photo2 {
+                                        grid-area: index2;
+                                    }
+                                                    
+                                    #photo3 {
+                                        grid-area: index3;
+                                    }
+                                                    
+                                    #photo4 {
+                                        grid-area: index4;
+                                    }
+                                                    
+                                    #photo5 {
+                                        grid-area: index5;
+                                    }
+                        }
+  }
+
+  /* -------------------- ESTILO DE IMAGEN DE PAGINA PRINCIPAL-------------------------------------*/
+  .imagenIndex {
+  border-radius: 0%;
+  width: 100%;
+  height: 100%;
+  animation-duration: 2s;
+  animation-name: aparecer;
+
+  :hover {
+    opacity: .5;
+    transition: .9s;
+    }
+  }
+
+
+  /* -------------------- ESTILO DE BARRA DIVISOR DE PAGINA PRINCIPAL -------------------------------------*/
+  hr {
+    height: 5px; 
+    margin: 0 auto; 
+    margin-top: 50px; 
+    width: 80%; 
+    color: #4D9E5C; 
+    
+    }
+  /* -------------------- ESTILO DE VIDEO -------------------------------------*/
+  iframe   {
+  margin: 100px auto 100px auto;
+  width: 900px;
+  height: 500px;
+  display: block;
+  }
+          
+  /* --------------------MEDIA QUERY INDEX-------------------------------------*/
+  @media only screen and (max-width: 768px) {
+    #galeriaIndex {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 100%;
+        grid-template-areas:
+                    "index1 index2 index3 index4 index5";           
+    }
+}
+
+  @media (max-width: 574px){
+    #containerIndex {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        grid-template-areas:
+                                "index1"
+                                "index2" 
+                                "index3" 
+                                "index4"
+                                "index5";
+
+    }
+}
+    
+/* -------------------- SECCIÓN BIKINI -------------------------------------*/
+
+
+/* -------------------- GRID GALERIA BIKINI -------------------------------------*/
+#galeriaBikini {
+display: grid;
+grid-template-columns: 100%;
+grid-template-rows: 100%;
+margin-top: -15px;
+}
+
+/* -------------------- CARRUSEL IMAGEN -------------------------------------*/
+.carousel img {
+min-width: 100%;
+height: 700px;
+max-width: none;
+}
+
+/* -------------------- CARRUSEL SLIDER -------------------------------------*/
+.carousel-item {
+height: 60vh;
+min-height: 55vh;
+background: no-repeat scroll center scroll;
+-webkit-background-size: cover;
+background-size: cover;
+
+:before {
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: transparent;
+    opacity: 0.3;
+    }
+}
+
+/* -------------------- CARRUSEL PIE DE IMAGEN -------------------------------------*/
+.carousel-caption {
+padding-left: 100px;
+padding-right: 100px;
+
+h5 {
+    font-size: $tamañoTitulo;
+    font-family: $estiloTexto;
+    }
+
+}
+
+/* -------------------- BOTÓN DE CARRUSEL -------------------------------------*/
+.slider-btn {
+margin-top: 10px;
+/* -------------------- BOTÓN 1 DE CARRUSEL -------------------------------------*/
+.btn {
+    background-color: #4D9E5C;
+    color:#fff;
+    border-radius: 5%;
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+    margin-right: 10px;
+    }
+/* -------------------- BOTÓN 2 DE CARRUSEL  -------------------------------------*/
+.btn-2 {
+    background-color: #83a088;
+    color:#fff;
+    }
+
+}
+
+/* -------------------- CONTENEDOR BIKINI TEXTO Y PARRAFOS -------------------------------------*/
+#containerBikini {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    align-items: center;
+    justify-content: center;
+    background-color: #c5d7bd;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+
+/* -------------------- ESTILOS DEL TITULO BIKINI -------------------------------------*/
+.tituloBikini {
+    text-align: center;
+    font-size: $tamañoTitulo;
+    font-family: $estiloTexto;
+    color: black;
+    margin-top: 100px;
+    }
+    /* -------------------- ESTILOS DEL PARRAFO BIKINI -------------------------------------*/
+    .parrafoBikini {
+    text-align: justify;
+    font-family: $estiloTexto;
+    font-size: $tamañoTexto;
+    color: black;
+    padding: 20px 20px;
+    }
+}
+
+
+
+
+/* --------------------MEDIA QUERY BIKINI-------------------------------------*/
+@media only screen and (max-width: 768px) {
+
+#galeriaBikini {
+display: grid;
+grid-template-columns: 100%;
+grid-template-rows: 100%;
+}
+
+
+}
+
+@media only screen and (max-width: 576px) {
+
+    #galeriaBikini {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    }
+
+    .btn {
+        background-color: #4D9E5C;
+        color:#fff;
+        border-radius: 5%;
+        padding: 1.5rem 2rem;
+        font-size: 1rem;
+        margin-right: 10px;
+        
+        }
+
+    .btn-2 {
+        background-color: #83a088;
+        color:#fff;
+        }
+    
+    }
+    
+
+/* -------------------- ACCESORIOS -------------------------------------*/
+
+/* -------------------- GRID ACCESORIOS -------------------------------------*/
+#galeriaAccesorios {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+    grid-template-areas:
+                                "foto1 foto2 foto3 "
+                                "foto4 foto5 foto6"
+                                "foto7 foto8 foto9";
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+    #foto1 {
+        grid-area: foto1;
+    
+    }
+    
+    #foto2 {
+        grid-area: foto2;
+    }
+    
+    #foto3 {
+        grid-area: foto3;
+    }
+    
+    #foto4 {
+        grid-area: foto4;
+    }
+    
+    #foto5 {
+        grid-area: foto5;
+    }
+    
+    #foto6 {
+        grid-area: foto6;
+    }
+    
+    #foto7 {
+        grid-area: foto7;
+    }
+    
+    #foto8 {
+        grid-area: foto8;
+    }
+    
+    #foto9 {
+        grid-area: foto9;
+    }
+  }
+  
+  
+  img {
+      max-width: 100%;
+      height: 80vh;
+      width: 80vh;
+      border-radius: 5%;
+  }
+  
+  .accesorioFotos:hover {
+    opacity: .5;
+    transition: .6s;   
+    
+  }
+
+  /* --------------------MEDIA QUERY ACCESORIOS-------------------------------------*/
+  @media only screen and (max-width: 992px) {
+    #galeriaAccesorios {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 11% 11% 11% 11% 11% 11% 11% 11% 11%;
+        grid-template-areas:
+                                    'foto1'
+                                    'foto2'
+                                    'foto3'
+                                    'foto4' 
+                                    'foto5'
+                                    'foto6' 
+                                    'foto7'
+                                    'foto8'
+                                    'foto9';
+        }
+
+        img {
+            max-width: 100%;
+            height: 80vh;
+            width: 80vh;
+            border-radius: 5%;
+        }
+    
+    .accesorioFotos:hover {
+      opacity: .5;
+      transition: .6s; 
+}         
+
+    
+}                                
+    
+@media only screen and (max-width: 767px) {
+    #galeriaAccesorios {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 11% 11% 11% 11% 11% 11% 11% 11% 11%;
+        grid-template-areas:
+                                    'foto1'
+                                    'foto2'
+                                    'foto3'
+                                    'foto4' 
+                                    'foto5'
+                                    'foto6' 
+                                    'foto7'
+                                    'foto8'
+                                    'foto9';
+        }
+
+        img {
+            max-width: 100%;
+            height: 80vh;
+            width: 80vh;
+            border-radius: 5%;
+        }
+        
+        .accesorioFotos:hover {
+          opacity: .5;
+          transition: .6s; 
+    }          
+    
+}
+@media only screen and (max-width: 576px) {
+    #galeriaAccesorios {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 11% 11% 11% 11% 11% 11% 11% 11% 11%;
+        grid-template-areas:
+                                    'foto1'
+                                    'foto2'
+                                    'foto3'
+                                    'foto4' 
+                                    'foto5'
+                                    'foto6' 
+                                    'foto7'
+                                    'foto8'
+                                    'foto9';
+        }
+
+        img {
+            max-width: 100%;
+            height: 80vh;
+            width: 80vh;
+            border-radius: 5%;
+        }
+        
+        .accesorioFotos:hover {
+          opacity: .5;
+          transition: .6s; 
+ }   
+
+  
+  
+}
+/* -------------------- SECCIÓN NOSOTROS -------------------------------------*/
+    .contenedorTextoNosotros {
+    max-height: 1000px; 
+    width: 100%; 
+    
+
+    }
+
+    .imgNosotros {
+    border-radius: 0%;
+    width: 100%;
+    height: 200px;
+    animation-duration: 5s;
+    animation-name: aparecer;
+    margin-top: -15px;
+
+            @keyframes aparecer {
+      0% {
+         opacity: 0;
+       }
+       100% {
+         opacity: 1;
+       }
+    }
+    }
+
+    .textoNosotros {
+        background-color: #c5d7bd;
+        height: 500px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 80px;
+       
+    
+        .tituloNosotros {
+            text-align: center;
+            font-size: $estiloTituloNosotros;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 50px;
+            margin-top: 0px;
+            }
+            
+            .parrafoNosotros {
+            text-align: justify;
+            font-size: $estiloParrafoNosotros;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 50px 50px;
+            line-height: 1.5;
+            }
+        }
+/* --------------------MEDIA QUERY NOSOTROS-------------------------------------*/
+    @media only screen and (max-width: 1200px) {
+
+        .textoNosotros {
+            height: auto;
+            padding-bottom: 20px;
+        }
+        
+        .imagenNosotros {
+
+            .imgNosotros {
+                border-radius: 0%;
+                width: 100%;
+                height: 200px;
+                animation-duration: 5s;
+                animation-name: aparecer;
+            
+                        @keyframes aparecer {
+                  0% {
+                     opacity: 0;
+                   }
+                   100% {
+                     opacity: 1;
+                   }
+                }
+                }   
+        }
+
+
+    .textoNosotros {
+        background-color: #c5d7bd;
+        height: 500px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        overflow: auto;
+        
+        .parrafoNosotros {
+            text-align: justify;
+            font-size: $estiloParrafoNosotros;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 0 60px 40px 60px;
+            line-height: 1.5;
+  
+            }
+    }
+
+
+
+ 
+}
+   
+/* -------------------- SECCIÓN CONTACTO -------------------------------------*/
+.imagenContacto {
+    margin-top: -15px;
+}
+
+.imagenContacto img {
+    border-radius: 0%;
+    width: 100%;
+    height: 200px;
+  }
+  
+  .form {
+  height: 625px;
+  border-radius: 5px;
+  background-color: #c5d7bd;
+  padding: 20px;
+  }
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    resize: vertical;
+  }
+  
+  .btn-success  {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    :hover {
+        background-color: #45a049;
+      }
+  
+  }
+  
+  .contenedorContacto {
+    border-radius: 5px;
+    background-color: #c5d7bd;
+    padding: 20px;
+  }
+
+/* -------------------- SECCIÓN DE TALLAS -------------------------------------*/
+
+ /* -------------------- IMAGEN -------------------------------------*/
+.imagenTallas {
+    margin-top:  -15px;
+&__img {
+    border-radius: 0%;
+    width: 100%;
+    height: 200px;   
+}
+}
+ /* -------------------- IMAGEN -------------------------------------*/
+.textoTallas {
+    background-color: #c5d7bd;
+    &__parrafo {
+        background-color: #c5d7bd;
+        text-align: center;   
+    }
+    }
+/* -------------------- CONTENEDOR TALLAS -------------------------------------*/
+#contenedorTallas {
+    display: grid;
+    height: 800px;
+    background-color: #c5d7bd;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:        
+                                "Seccion1 Seccion2";
+                                
+    grid-column-gap: 5px;
+    grid-row-gap: 20px;
+   
+}
+
+#Seccion1 {
+    height: 100%;
+}
+/* ------------------------------------ TITULO DE TABLA ------------------------------------------*/
+
+
+.tituloMedidas {
+text-align: center;
+font-size: $tamañoTitulo;
+font-family: $estiloTexto;
+color: black;
+margin-top: 50px;
+}
+
+/* ------------------------------ TABLA DE MEDIDAS DEL PRODUCTO -------------------------------------*/
+.center {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.Tallasparrafo {
+    font-size: $tamañoTexto;
+    font-family: $estiloTexto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c5d7bd;
+}
+
+.Medidas {
+    border-collapse: collapse;
+    width: 100%;
+    
+
+    &__encabezado {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    &__celda {
+        padding: 15px;
+        text-align: left;
+        font-family: $estiloTexto;
+        font-size: $tamañoTexto;
+        border-bottom: 1px solid #ddd;
+    }
+    
+}
+
+
+.Colores {
+    margin-left: 25%;
+    margin-right: 25%;
+
+    &__titulo {
+        text-align: center;
+        font-size: $tamañoTitulo;
+        font-family: $estiloTexto;
+        color: black;
+        margin-top: 50px;    
+    }
+
+    &__lista {
+        text-align: center;
+        font-family: $estiloTexto;
+        font-size: $tamañoTexto;
+         
+    }
+
+    &__itm {
+        font-size: $tamañoTextoG;
+        list-style: none; 
+        color: black;
+    }
+
+}
+/* --------------------MEDIA QUERY TALLAS-------------------------------------*/
+@media only screen and (max-width: 992px){
+    #contenedorTallas {
+        display: grid;
+        height: 1000px;
+        background-color: #c5d7bd;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas:        
+                                    'Seccion1'
+                                    'Seccion2';
+                                    
+        grid-column-gap: 5px;
+        grid-row-gap: 20px;
+       
+    }
+
+    #Seccion2 {
+        margin-top: 20px;
+    }
+
+}
+
+
+  /* -------------------- SECCIÓN ENVÍOS -------------------------------------*/
+
+  .contenedorEnvio {
+      max-width: 1000px;
+      width: 90%;
+      margin: 0 auto;
+
+  }
+
+  .contenedor__cards {
+      margin: 70px 0;
+  }
+
+  .card {
+      background:#c5d7bd;
+      border-radius: 15px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-bottom: 50px;
+
+    &__thumbnail {
+        width: 550px;
+        height: 200px;          
+        margin-right: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        display: inline-block;
+      }
+
+      &__img {
+          width: 100%;
+          height: 75%;
+      }
+
+      &__titulo {
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: $textoTalle;
+          font-weight: normal;
+          margin-bottom: 20px;
+      }
+
+      &__enlace {
+          color: #000;
+      }
+
+      &__extracto {
+          line-height: 28px;
+          color: black;
+          margin-bottom: 20px;
+      }
+
+  }
+
+  .boton {
+      border: none;
+      min-width: 180px;
+      height: 50px;
+      padding: 0 30px;
+      background: #000;
+      color: #fff;
+      display: inline-block;
+      border-radius: 100px;
+      text-decoration: none;
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #403CC2;
+      transition: -3s ease all;
+
+      &__texto {
+         font-weight: 600; 
+      }
+
+      :hover {
+        background: #1B1881;
+        text-decoration: none;
+        }
+  }
+
+    .boton--absolute {
+        position: absolute;
+        right: 20px;
+        bottom: -25px;
+    }
+  
+    .boton--verde {
+        background: #7BA771;
+
+        :hover {
+            background: #437837;
+        }
+    }
+
+    .frase {
+        text-align: center;
+        margin: 70px 0;
+
+    &__texto {
+        margin-bottom: 20px;
+        font-size: $textoTalle;
+        font-family: Verdana;
+        font-weight: 600;
+        font-style: italic;
+    }    
+    }
+
